@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  aspect-ratio: 25/9;
+  letter-spacing: 2px;
+  color: #fff;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 420px;
+  background-color: #03265f;
+  border-radius: 10px;
+}
+.container::before{
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(135deg, #e5989b, #ffb4a2 20%, #1b2028 30%, #2c333e 100%);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+
+.profile--image{
+  position: absolute;
+  top: 45px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile--image img{
+width: 100%;
+}
+
+.profile--name {
+  position: absolute;
+  top: 165px
+  }
+
+  .profile-user-handle{
+    position: absolute;
+    top: 206px;
+    font-size: 15px;
+    color: #7d8396;
+  }
+  .profile--action{
+    position: absolute;
+    top: 260px;
+  }
+  .profile--action .btn--primary{
+   height: 35px;
+   padding: 0 10px;
+   border: none;
+   border-radius: 25px;
+   background-color: #3772ff;
+   color: #fff;
+   font-size:14px;
+   font-weight: 500;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+  }
+  .profile--action .btn--icon{
+    width: 35px;
+    height: 35px;
+    border: 3px solid #343945;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #7d8396;
+    font-size:14px;
+   transition: .5s;
+   }
+   .profile--action .btn--icon:hover{
+ border-color: #7d8396;
+   }
+  .profile--links{
+    position: absolute;
+    bottom: 45px;
+  }
+  .profile--links a{
+color:#7d8396;
+font-size: 16px;
+padding: 5px ;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .container{
+      top: 60px;
+    }
+  }
